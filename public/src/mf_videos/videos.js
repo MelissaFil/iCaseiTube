@@ -10,9 +10,9 @@ function loadICaseiVideos(searchTerm) {
         .then(data => {
             const videos = data.items.map(item => ({
                 id: item.id.videoId,
-                title: item.snippet.title,
+                title: item.snippet.title.split('#')[0].trim(),
                 description: item.snippet.description,
-                thumbnail: item.snippet.thumbnails.default.url
+                thumbnail: item.snippet.thumbnails.medium.url
             }));
 
             renderVideoList(videos);
