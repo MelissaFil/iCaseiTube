@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 videoContainer.innerHTML = html;
                 const script = document.createElement('script');
                 script.src = 'src/mf_videos/videos.js';
+                script.type = 'module';
                 document.body.appendChild(script);
             })
             .catch(error => console.error('Erro ao carregar o arquivo de vídeos:', error));

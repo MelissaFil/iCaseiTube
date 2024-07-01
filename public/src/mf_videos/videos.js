@@ -1,6 +1,7 @@
+import config from "../../../config.js";
 // Função para carregar vídeos do iCasei da API do YouTube
 function loadICaseiVideos(searchTerm) {
-    const apiKey = 'AIzaSyBIHhonPI23EkOzeBZ1E0zqCBGK6uZrMmA';
+    const apiKey = config.apiKey;
     const channelId = 'UCu5VHc965WcULpGtbu7TcSQ';
     const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&type=video&q=${searchTerm}&channelId=${channelId}&key=${apiKey}`;
     console.log('load')
